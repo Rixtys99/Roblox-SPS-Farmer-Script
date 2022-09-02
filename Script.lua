@@ -26,7 +26,7 @@ local DestroyScript = Instance.new("TextButton")
 
 -- Settings --
 
-local zone = 17 -- Enter which zone do you want to auto farm
+local zone = 17-- Enter which zone do you want to auto farm
 local cooldown = 0.05 -- Time between teleports
 local boosterLevel = "Auto" -- Level of the booster 1, 2, 3, 4, 5 or Auto
 local enabled = false
@@ -236,6 +236,7 @@ end)
 
 while wait(cooldown) do
 	if enabled then
+	    loc1 = game.Workspace.Map.Stages.Boosts[zone]
 		if boosterLevel == "Auto" then
 			loc01 = "MAP_" .. zone .. "_1"
 			loc02 = "MAP_" .. zone .. "_2"
